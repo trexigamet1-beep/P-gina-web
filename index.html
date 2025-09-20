@@ -215,13 +215,16 @@
       </div>
     </div>
 
-    <!-- Sección de anuncios -->
-    <div class="ads">
-      <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script>
-      <script>
-        linkvertise(1400488, {whitelist: [""], blacklist: []});
-      </script>
-    </div>
+    <!-- Sección de anuncios (Linkvertise) -->
+    <div id="linkvertise-box" class="ads"></div>
+    <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script>
+    <script>
+      linkvertise(1400488, {
+        container: "#linkvertise-box",
+        whitelist: [""],
+        blacklist: []
+      });
+    </script>
 
   </main>
 
