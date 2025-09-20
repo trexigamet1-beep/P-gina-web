@@ -20,7 +20,6 @@
       font-size: 26px;
       font-weight: bold;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      position: relative;
     }
 
     header img {
@@ -51,15 +50,13 @@
     }
 
     .download-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       background: linear-gradient(90deg, #ff5c5c, #ff00aa);
       color: #fff;
       text-decoration: none;
       text-align: center;
       padding: 18px;
-      margin: 15px auto;
+      margin: 10px auto;
       border-radius: 12px;
       font-size: 18px;
       font-weight: bold;
@@ -91,18 +88,17 @@
       color: #fff;
     }
 
-    /* Carrusel automático con scroll continuo */
+    /* Carrusel automático con JS */
     .carousel-container {
       overflow: hidden;
-      border-radius: 12px;
-      margin: 25px 0;
       width: 100%;
+      margin: 25px 0;
     }
 
     .carousel-track {
       display: flex;
       gap: 15px;
-      animation: scroll 20s linear infinite;
+      scroll-behavior: smooth;
     }
 
     .carousel-item {
@@ -115,16 +111,11 @@
       height: 180px;
       object-fit: cover;
       border-radius: 12px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .carousel-item img:hover {
       transform: scale(1.05);
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-calc((300px + 15px) * 4)); }
     }
 
     @media (max-width: 768px) {
@@ -133,10 +124,6 @@
       }
       .carousel-item img {
         height: 150px;
-      }
-      @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-calc((250px + 15px) * 4)); }
       }
     }
 
@@ -200,23 +187,34 @@
       <li>Compatible con todos los dispositivos</li>
     </ul>
 
-    <!-- Carrusel automático de screenshots (scroll continuo) -->
+    <!-- Carrusel automático de screenshots -->
     <h2>Screenshots del juego</h2>
     <div class="carousel-container">
-      <div class="carousel-track">
-        <!-- Original -->
+      <div class="carousel-track" id="carousel">
         <div class="carousel-item"><img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4"></div>
-
-        <!-- Duplicado para scroll infinito -->
+        <!-- Duplicado para scroll continuo -->
         <div class="carousel-item"><img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3"></div>
         <div class="carousel-item"><img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4"></div>
       </div>
     </div>
+
+    <script>
+      // JS para scroll continuo
+      const carousel = document.getElementById('carousel');
+      let scrollAmount = 0;
+      function scrollCarousel() {
+        scrollAmount += 1; // Cambia este valor para ajustar velocidad
+        if (scrollAmount >= carousel.scrollWidth / 2) scrollAmount = 0;
+        carousel.scrollLeft = scrollAmount;
+        requestAnimationFrame(scrollCarousel);
+      }
+      scrollCarousel();
+    </script>
 
   </main>
 
