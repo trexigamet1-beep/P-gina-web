@@ -1,264 +1,260 @@
-<Mundo Apk>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Bedrock</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212;
-      color: #fff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Bedrock - TrexiGaming</title>
 
-    header {
-      background: linear-gradient(90deg, #a100ff, #ff00aa);
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 26px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
+<!-- Fuente moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+<style>
+  /* Reset y fuente */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Montserrat', sans-serif; background: #0e0e0e; color: #fff; }
 
-    .banner {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 25px;
-    }
+  /* Header */
+  header {
+    background: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ff5c5c;
+  }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #ff5c5c;
-    }
+  /* Contenedor principal */
+  main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
 
-    .download-btn {
-      display: block;
-      background: linear-gradient(90deg, #ff5c5c, #ff00aa);
-      color: #fff;
-      text-decoration: none;
-      text-align: center;
-      padding: 18px;
-      margin: 10px auto;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      max-width: 400px;
-    }
+  /* Banner */
+  .banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+  }
 
-    .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(255,0,170,0.5);
-    }
+  /* Noticia */
+  .news-section {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+  }
 
-    h2 {
-      color: #ff77aa;
-      margin-top: 35px;
-      text-align: center;
-    }
+  .news-date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ccc;
+    font-size: 14px;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .news-date svg { width: 18px; height: 18px; fill: #ff5c5c; }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
+  .news-section h2 {
+    color: #ff77aa;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
 
-    ul li {
-      margin: 10px 0;
-      font-size: 16px;
-      font-weight: bold;
-      color: #fff;
-    }
+  .news-section p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
 
-    /* Carrusel */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      margin: 25px 0;
-    }
+  /* Botones de descarga */
+  .download-btn {
+    display: block;
+    background: linear-gradient(90deg, #ff5c5c, #ff00aa);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px;
+    margin: 15px auto;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 350px;
+    transition: all 0.3s ease;
+  }
+  .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,0,170,0.5);
+  }
 
-    .carousel-track {
-      display: flex;
-      width: max-content;
-      animation: scroll 25s linear infinite;
-    }
+  /* Imagen de Minecraft */
+  .app-image {
+    width: 300px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  }
 
-    .carousel-track img {
-      width: 300px;
-      height: 180px;
-      object-fit: cover;
-      margin-right: 15px;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
+  /* Características */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  .feature-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover { transform: translateY(-5px); }
+  .feature-card h3 {
+    color: #ff77aa;
+    margin-bottom: 10px;
+  }
+  .feature-card p { font-size: 14px; line-height: 1.5; }
 
-    .carousel-track img:hover {
-      transform: scale(1.05);
-    }
+  /* Carrusel */
+  .carousel-container {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+  .carousel-track img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  .carousel-track img:hover { transform: scale(1.05); }
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-    @media (max-width: 768px) {
-      .carousel-track img {
-        width: 250px;
-        height: 150px;
-      }
-    }
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #1f1f1f;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ccc;
+    border-top: 2px solid #ff5c5c;
+  }
 
-    .app-version {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .app-image {
-      width: 250px;
-      border-radius: 15px;
-      margin-bottom: 10px;
-    }
-
-    .news-section {
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-      position: relative;
-    }
-    .news-section h2 {
-      color: #ff77aa;
-      margin-top: 5px;
-    }
-    .news-date {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      color: #ccc;
-      font-size: 14px;
-      margin-bottom: 10px;
-      gap: 6px;
-    }
-    .news-date svg {
-      width: 18px;
-      height: 18px;
-      fill: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      background: #222;
-      padding: 20px;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #ccc;
-    }
-  </style>
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .carousel-track img { width: 250px; height: 150px; }
+    .app-image { width: 250px; }
+    .feature-card { width: 45%; }
+  }
+  @media (max-width: 480px) {
+    .feature-card { width: 100%; }
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    Minecraft Bedrock
-  </header>
+<header>Minecraft Bedrock - TrexiGaming</header>
 
-  <main>
-    <!-- Banner principal -->
-    <img src="https://i.postimg.cc/rzLPLJmj/IMG-7442.png" alt="Banner Minecraft" class="banner">
+<main>
 
-    <!-- Noticia -->
-    <div class="news-section">
-      <div class="news-date">
-        <!-- SVG Calendario inline -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 18H5V9h14v13zm-7-11h5v5h-5z"/>
-        </svg>
-        <span id="news-date-text"></span>
-      </div>
-      <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
-      <p>
-        Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android.  
-        Esta actualización trae consigo varias mejoras y novedades que cambiarán la experiencia de los jugadores.
-      </p>
-      <p>
-        Entre los cambios más destacados se encuentran <b>nuevos bloques, armaduras y mobs</b>, junto con una mejora en el sistema de construcción, que ahora es más intuitivo y creativo.  
-        Además, se ha introducido una <b>nueva mecánica de combate</b>, ofreciendo a los jugadores más estrategias dentro del juego.
-      </p>
-      <p>
-        El apartado multijugador también recibió optimización: ahora las partidas en línea son más estables y rápidas.  
-        Para unirte, solo debes ir al menú multijugador, agregar un servidor con su nombre y dirección, y comenzar a jugar con amigos en cualquier parte del mundo.
-      </p>
-      <p>
-        Con cada actualización, <b>Minecraft Bedrock</b> reafirma su posición como uno de los títulos más jugados en dispositivos móviles.  
-        Los desarrolladores aseguran que habrá más sorpresas en futuras versiones, lo que mantiene a la comunidad siempre activa y entusiasmada.
-      </p>
+  <!-- Banner -->
+  <img src="https://i.postimg.cc/rzLPLJmj/IMG-7442.png" alt="Banner Minecraft" class="banner">
+
+  <!-- Noticia -->
+  <div class="news-section">
+    <div class="news-date">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 18H5V9h14v13zm-7-11h5v5h-5z"/>
+      </svg>
+      <span id="news-date-text"></span>
     </div>
+    <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
+    <p>Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android. Esta actualización incluye mejoras de rendimiento, nuevos bloques, mobs, armaduras y mecánicas de combate.</p>
+    <p>El multijugador ahora es más estable y permite partidas rápidas con amigos. Además, se ha optimizado la construcción de estructuras y se agregaron nuevas funciones para personalizar mundos y personajes.</p>
+    <p>Esta versión también trae corrección de errores y mejoras en los sonidos y la música, haciendo la experiencia de juego más envolvente. Los desarrolladores anuncian que vendrán más sorpresas en futuras actualizaciones.</p>
+    <p>¡Mantente al día con las novedades y disfruta de todo lo que Minecraft Bedrock tiene para ofrecer!</p>
+  </div>
 
-    <h1>Descarga Minecraft en sus últimas versiones 👇</h1>
+  <!-- Descargas -->
+  <div class="app-version">
+    <img src="https://i.postimg.cc/zVNWKtp3/IMG-7433.jpg" alt="Minecraft APK" class="app-image">
 
-    <!-- Minecraft (una sola imagen) -->
-    <div class="app-version">
-      <img src="https://i.postimg.cc/zVNWKtp3/IMG-7433.jpg" alt="Minecraft APK" class="app-image">
+    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn">Minecraft 1.21.101 con música</a>
+    <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn">Minecraft 1.21.101 sin música</a>
+  </div>
 
-      <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn">
-        Minecraft 1.21.101 con música
-      </a>
-
-      <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn">
-        Minecraft 1.21.101 sin música
-      </a>
+  <!-- Características -->
+  <h2 style="text-align:center; margin-bottom:20px;">Características y novedades</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>Multijugador Online</h3>
+      <p>Juega con amigos y otros jugadores alrededor del mundo en servidores estables y rápidos.</p>
     </div>
-
-    <!-- Características -->
-    <h2>Características principales</h2>
-    <ul>
-      <li>Multijugador online y local</li>
-      <li>Soporte para mods y skins</li>
-      <li>Mundo infinito y actualizaciones constantes</li>
-      <li>Música y sonidos mejorados</li>
-      <li>Compatible con todos los dispositivos</li>
-    </ul>
-
-    <!-- Carrusel -->
-    <h2>Screenshots del juego</h2>
-    <div class="carousel-container">
-      <div class="carousel-track">
-        <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
-        <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
-        <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
-        <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
-        <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
-        <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
-        <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
-        <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
-      </div>
+    <div class="feature-card">
+      <h3>Nuevos Bloques</h3>
+      <p>Explora y construye con bloques inéditos que amplían tu creatividad y posibilidades.</p>
     </div>
+    <div class="feature-card">
+      <h3>Mecánica de Combate</h3>
+      <p>Mejoras en el combate y nuevas armas permiten estrategias más variadas en tus batallas.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Música Mejorada</h3>
+      <p>Disfruta de sonidos y música más envolventes, mejorando la experiencia de juego.</p>
+    </div>
+  </div>
 
-  </main>
+  <!-- Carrusel -->
+  <h2 style="text-align:center; margin-bottom:20px;">Screenshots del juego</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
+      <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
+      <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
+      <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
+      <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
+      <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
+      <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
+      <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 TrexiGaming. Todos los derechos reservados.
-  </footer>
+</main>
 
-  <!-- Script para fecha automática -->
-  <script>
-    const dateSpan = document.getElementById('news-date-text');
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const today = new Date();
-    dateSpan.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
-  </script>
+<footer>
+  &copy; 2025 TrexiGaming. Todos los derechos reservados.
+</footer>
+
+<script>
+  const dateSpan = document.getElementById('news-date-text');
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date();
+  dateSpan.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
+</script>
 
 </body>
 </html>
