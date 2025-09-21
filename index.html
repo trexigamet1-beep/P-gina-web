@@ -137,15 +137,24 @@
       margin-top: 30px;
       margin-bottom: 40px;
       line-height: 1.6;
+      position: relative;
     }
     .news-section h2 {
       color: #ff77aa;
+      margin-top: 5px;
     }
     .news-date {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       color: #ccc;
       font-size: 14px;
       margin-bottom: 10px;
-      text-align: right;
+      gap: 6px;
+    }
+    .news-date img {
+      width: 18px;
+      height: 18px;
     }
 
     footer {
@@ -170,7 +179,10 @@
 
     <!-- Noticia -->
     <div class="news-section">
-      <div class="news-date" id="news-date"></div>
+      <div class="news-date" id="news-date">
+        <img src="https://i.postimg.cc/7ZxSGGmK/calendar-icon.png" alt="Calendario"> 
+        <span></span>
+      </div>
       <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
       <p>
         Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android.  
@@ -238,10 +250,10 @@
 
   <!-- Script para fecha automática -->
   <script>
-    const dateElement = document.getElementById('news-date');
+    const dateSpan = document.querySelector('#news-date span');
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const today = new Date();
-    dateElement.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
+    dateSpan.textContent = today.toLocaleDateString('es-ES', options);
   </script>
 
 </body>
