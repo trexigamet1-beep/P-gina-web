@@ -141,6 +141,12 @@
     .news-section h2 {
       color: #ff77aa;
     }
+    .news-date {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: right;
+    }
 
     footer {
       text-align: center;
@@ -164,6 +170,7 @@
 
     <!-- Noticia -->
     <div class="news-section">
+      <div class="news-date" id="news-date"></div>
       <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
       <p>
         Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android.  
@@ -228,6 +235,14 @@
   <footer>
     &copy; 2025 TrexiGaming. Todos los derechos reservados.
   </footer>
+
+  <!-- Script para fecha automática -->
+  <script>
+    const dateElement = document.getElementById('news-date');
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    dateElement.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
+  </script>
 
 </body>
 </html>
