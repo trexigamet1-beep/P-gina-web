@@ -88,7 +88,7 @@
       color: #fff;
     }
 
-    /* Carrusel original CSS */
+    /* Carrusel */
     .carousel-container {
       position: relative;
       overflow: hidden;
@@ -98,8 +98,8 @@
 
     .carousel-track {
       display: flex;
-      width: calc(300px * 8); /* 4 imágenes + duplicadas */
-      animation: scroll 16s linear infinite;
+      width: max-content;
+      animation: scroll 25s linear infinite;
     }
 
     .carousel-track img {
@@ -117,13 +117,10 @@
 
     @keyframes scroll {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-1200px); } /* 4 imágenes * 300px */
+      100% { transform: translateX(-50%); }
     }
 
     @media (max-width: 768px) {
-      .carousel-track {
-        width: calc(250px * 8);
-      }
       .carousel-track img {
         width: 250px;
         height: 150px;
@@ -138,6 +135,17 @@
       width: 250px;
       border-radius: 15px;
       margin-bottom: 10px;
+    }
+
+    .news-section {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+    .news-section h2 {
+      color: #ff77aa;
     }
 
     footer {
@@ -189,7 +197,7 @@
       <li>Compatible con todos los dispositivos</li>
     </ul>
 
-    <!-- Carrusel original CSS -->
+    <!-- Carrusel -->
     <h2>Screenshots del juego</h2>
     <div class="carousel-container">
       <div class="carousel-track">
@@ -197,12 +205,27 @@
         <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
         <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
         <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
-        <!-- Duplicado para scroll continuo -->
         <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
         <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
         <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
         <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
       </div>
+    </div>
+
+    <!-- Noticia -->
+    <div class="news-section">
+      <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
+      <p>
+        Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android.  
+        Esta actualización introduce mejoras importantes a la jugabilidad, como nuevos bloques, mobs y armaduras.  
+      </p>
+      <p>
+        Además, el sistema de construcción se ha renovado con más elementos de diseño y se ha agregado una nueva forma de combate.  
+        Los jugadores ahora pueden disfrutar de un multijugador más estable y mejor optimizado.
+      </p>
+      <p>
+        Para jugar en línea, solo debes ir al menú multijugador, agregar un servidor con su nombre y dirección, y conectarte con tus amigos.
+      </p>
     </div>
 
   </main>
