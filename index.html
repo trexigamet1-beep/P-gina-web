@@ -152,9 +152,10 @@
       margin-bottom: 10px;
       gap: 6px;
     }
-    .news-date img {
+    .news-date svg {
       width: 18px;
       height: 18px;
+      fill: #ccc;
     }
 
     footer {
@@ -179,9 +180,12 @@
 
     <!-- Noticia -->
     <div class="news-section">
-      <div class="news-date" id="news-date">
-        <img src="https://i.postimg.cc/7ZxSGGmK/calendar-icon.png" alt="Calendario"> 
-        <span></span>
+      <div class="news-date">
+        <!-- SVG Calendario inline -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 18H5V9h14v13zm-7-11h5v5h-5z"/>
+        </svg>
+        <span id="news-date-text"></span>
       </div>
       <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
       <p>
@@ -250,10 +254,10 @@
 
   <!-- Script para fecha automática -->
   <script>
-    const dateSpan = document.querySelector('#news-date span');
+    const dateSpan = document.getElementById('news-date-text');
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const today = new Date();
-    dateSpan.textContent = today.toLocaleDateString('es-ES', options);
+    dateSpan.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
   </script>
 
 </body>
