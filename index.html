@@ -5,12 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minecraft Bedrock - TrexiGaming</title>
 
-<!-- Fuente moderna -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
   * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
-  body { background: linear-gradient(to bottom, #f0f0f0, #ffffff); color:#000; }
+  body { background:#fff; color:#000; }
 
   /* Header */
   header {
@@ -52,15 +51,15 @@
 
   .banner { width:100%; max-height:320px; object-fit:cover; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.2); margin-bottom:30px; }
 
-  .news-section {
+  .news-section, .tutorial-section, .reviews-section {
     background:#fff; padding:25px; border-radius:12px;
     box-shadow:0 4px 15px rgba(0,0,0,0.1); margin-bottom:30px;
   }
 
   .news-date { display:flex; justify-content:flex-end; align-items:center; font-size:14px; color:#666; margin-bottom:10px; gap:8px; }
   .news-date svg { width:18px; height:18px; fill:#666; }
-  .news-section h2 { font-size:24px; margin-bottom:15px; text-align:center; }
-  .news-section p { line-height:1.7; margin-bottom:12px; font-size:16px; }
+  h2 { font-size:24px; margin-bottom:15px; text-align:center; }
+  p { line-height:1.7; margin-bottom:12px; font-size:16px; }
 
   .app-version { text-align:center; margin-bottom:40px; }
   .app-image { width:300px; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
@@ -68,6 +67,7 @@
     display:inline-block; background:#1e1e1e; color:#fff; text-decoration:none;
     padding:16px 25px; margin:10px; border-radius:8px; font-size:18px; font-weight:600;
     transition: all 0.3s ease;
+    position: relative;
   }
   .download-btn:hover { background:#ffcc00; color:#000; transform:translateY(-3px); }
 
@@ -107,6 +107,8 @@
       <a href="#news">Noticias</a>
       <a href="#downloads">Descargas</a>
       <a href="#features">Características</a>
+      <a href="#tutorials">Guías</a>
+      <a href="#reviews">Reseñas</a>
       <a href="#screenshots">Screenshots</a>
     </nav>
   </div>
@@ -117,7 +119,7 @@
   <!-- Banner principal -->
   <img src="https://i.postimg.cc/rzLPLJmj/IMG-7442.png" alt="Banner Minecraft" class="banner">
 
-  <!-- Noticia -->
+  <!-- Noticias extendidas -->
   <div class="news-section" id="news">
     <div class="news-date">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -125,8 +127,36 @@
       </svg>
       <span id="news-date-text"></span>
     </div>
-    <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
-    <p>Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android, con mejoras de rendimiento, nuevos bloques y mecánicas de combate.</p>
+    <h2>📢 Actualización 1.21.101</h2>
+    <p>Mojang ha lanzado la versión 1.21.101 de Minecraft Bedrock para Android. Esta actualización incluye mejoras de rendimiento, nuevos bloques, mobs y armaduras. El multijugador ahora es más estable y rápido.</p>
+    <p>Se agregaron nuevas funciones de personalización de mundos, construcción y combate. Además, los desarrolladores anunciaron futuras sorpresas y eventos en el juego.</p>
+    <h3>Nuevos mobs</h3>
+    <ul>
+      <li>Dragón de hielo: aparece en biomas nevados.</li>
+      <li>Fénix: criatura rara con habilidades de fuego.</li>
+      <li>Golem mejorado: protege aldeas con más eficacia.</li>
+    </ul>
+    <h3>Mejoras de construcción</h3>
+    <p>Ahora los bloques tienen nuevas texturas y efectos de luz, permitiendo estructuras más detalladas y realistas. Los jugadores pueden combinar materiales para crear edificaciones únicas.</p>
+  </div>
+
+  <!-- Tutorial / Guía -->
+  <div class="tutorial-section" id="tutorials">
+    <h2>🛠 Guía para principiantes</h2>
+    <p>Si eres nuevo en Minecraft, sigue estos pasos para comenzar:</p>
+    <ol>
+      <li>Instala la APK de Minecraft Bedrock desde nuestros enlaces de descarga.</li>
+      <li>Crea tu primer mundo y selecciona el modo supervivencia.</li>
+      <li>Recolecta recursos básicos como madera, piedra y comida.</li>
+      <li>Construye tu primer refugio antes de la primera noche.</li>
+      <li>Explora cuevas y minas para obtener minerales raros y herramientas.</li>
+    </ol>
+    <p>Tips adicionales:</p>
+    <ul>
+      <li>Siempre lleva antorchas para iluminar cuevas.</li>
+      <li>Usa mapas para no perderte.</li>
+      <li>Experimenta con redstone para crear mecanismos.</li>
+    </ul>
   </div>
 
   <!-- Banner RevenueCPM (iframe) -->
@@ -146,36 +176,4 @@
   <!-- Descargas -->
   <div class="app-version" id="downloads">
     <img src="https://i.postimg.cc/zVNWKtp3/IMG-7433.jpg" alt="Minecraft APK" class="app-image">
-    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn">Minecraft 1.21.101 con música</a>
-    <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn">Minecraft 1.21.101 sin música</a>
-  </div>
-
-  <!-- Características -->
-  <h2 style="text-align:center; margin-bottom:20px;" id="features">Características y novedades</h2>
-  <div class="features">
-    <div class="feature-card">
-      <h3>Multijugador Online</h3>
-      <p>Juega con amigos y otros jugadores en servidores estables y rápidos.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Nuevos Bloques</h3>
-      <p>Explora y construye con bloques inéditos que amplían tu creatividad.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Mecánica de Combate</h3>
-      <p>Mejoras en el combate y nuevas armas permiten estrategias variadas.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Música Mejorada</h3>
-      <p>Disfruta de sonidos y música más envolventes.</p>
-    </div>
-  </div>
-
-  <!-- Carrusel -->
-  <h2 style="text-align:center; margin-bottom:20px;" id="screenshots">Screenshots del juego</h2>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
-      <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
-      <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
-      <img src="https://i.postimg.cc/N9Xhq7y2/IMG-
+    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn" onclick="load
