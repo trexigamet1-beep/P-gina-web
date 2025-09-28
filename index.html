@@ -11,50 +11,45 @@
   * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
   body { background:#fff; color:#000; }
 
-  /* Header */
   header {
     position: sticky;
-    top: 0;
-    width: 100%;
-    background: #1e1e1e;
-    color: #fff;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 10px 0;
+    top:0;
+    width:100%;
+    background:#1e1e1e;
+    color:#fff;
+    z-index:1000;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    padding:10px 0;
   }
 
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    gap: 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 20px;
+    flex-wrap:wrap;
+    gap:10px;
   }
 
-  .logo { font-size: 24px; font-weight: 700; }
+  .logo { font-size:24px; font-weight:700; }
 
   .nav-menu a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:600;
     transition: all 0.3s ease;
   }
-  .nav-menu a:first-child { margin-left: 0; }
-  .nav-menu a:hover { color: #ffcc00; }
+  .nav-menu a:first-child { margin-left:0; }
+  .nav-menu a:hover { color:#ffcc00; }
 
-  /* Main */
   main { max-width:1000px; margin:30px auto; padding:0 20px; }
 
   .banner { width:100%; max-height:320px; object-fit:cover; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.2); margin-bottom:30px; }
 
-  .news-section, .tutorial-section, .reviews-section {
-    background:#fff; padding:25px; border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1); margin-bottom:30px;
-  }
+  .news-section, .features, .carousel-container { margin-bottom:40px; }
 
   .news-date { display:flex; justify-content:flex-end; align-items:center; font-size:14px; color:#666; margin-bottom:10px; gap:8px; }
   .news-date svg { width:18px; height:18px; fill:#666; }
@@ -71,7 +66,7 @@
   }
   .download-btn:hover { background:#ffcc00; color:#000; transform:translateY(-3px); }
 
-  .features { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-bottom:40px; }
+  .features { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
   .feature-card {
     background:#fff; padding:20px; border-radius:12px; width:220px;
     text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1);
@@ -81,7 +76,7 @@
   .feature-card h3 { margin-bottom:10px; }
   .feature-card p { font-size:14px; line-height:1.5; }
 
-  .carousel-container { overflow:hidden; border-radius:12px; margin-bottom:50px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+  .carousel-container { overflow:hidden; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
   .carousel-track { display:flex; width:max-content; animation:scroll 30s linear infinite; }
   .carousel-track img { width:300px; height:180px; object-fit:cover; margin-right:15px; border-radius:12px; transition: transform 0.3s; }
   .carousel-track img:hover { transform:scale(1.05); }
@@ -107,8 +102,6 @@
       <a href="#news">Noticias</a>
       <a href="#downloads">Descargas</a>
       <a href="#features">Características</a>
-      <a href="#tutorials">Guías</a>
-      <a href="#reviews">Reseñas</a>
       <a href="#screenshots">Screenshots</a>
     </nav>
   </div>
@@ -116,10 +109,8 @@
 
 <main>
 
-  <!-- Banner principal -->
   <img src="https://i.postimg.cc/rzLPLJmj/IMG-7442.png" alt="Banner Minecraft" class="banner">
 
-  <!-- Noticias extendidas -->
   <div class="news-section" id="news">
     <div class="news-date">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -127,39 +118,12 @@
       </svg>
       <span id="news-date-text"></span>
     </div>
-    <h2>📢 Actualización 1.21.101</h2>
-    <p>Mojang ha lanzado la versión 1.21.101 de Minecraft Bedrock para Android. Esta actualización incluye mejoras de rendimiento, nuevos bloques, mobs y armaduras. El multijugador ahora es más estable y rápido.</p>
-    <p>Se agregaron nuevas funciones de personalización de mundos, construcción y combate. Además, los desarrolladores anunciaron futuras sorpresas y eventos en el juego.</p>
-    <h3>Nuevos mobs</h3>
-    <ul>
-      <li>Dragón de hielo: aparece en biomas nevados.</li>
-      <li>Fénix: criatura rara con habilidades de fuego.</li>
-      <li>Golem mejorado: protege aldeas con más eficacia.</li>
-    </ul>
-    <h3>Mejoras de construcción</h3>
-    <p>Ahora los bloques tienen nuevas texturas y efectos de luz, permitiendo estructuras más detalladas y realistas. Los jugadores pueden combinar materiales para crear edificaciones únicas.</p>
+    <h2>📢 Minecraft recibe nueva actualización en Android (2025)</h2>
+    <p>Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para Android con nuevas funciones, mobs, bloques y mejoras de rendimiento.</p>
+    <p>El multijugador ahora es más estable y rápido. Se han agregado nuevas funciones de personalización y construcción.</p>
   </div>
 
-  <!-- Tutorial / Guía -->
-  <div class="tutorial-section" id="tutorials">
-    <h2>🛠 Guía para principiantes</h2>
-    <p>Si eres nuevo en Minecraft, sigue estos pasos para comenzar:</p>
-    <ol>
-      <li>Instala la APK de Minecraft Bedrock desde nuestros enlaces de descarga.</li>
-      <li>Crea tu primer mundo y selecciona el modo supervivencia.</li>
-      <li>Recolecta recursos básicos como madera, piedra y comida.</li>
-      <li>Construye tu primer refugio antes de la primera noche.</li>
-      <li>Explora cuevas y minas para obtener minerales raros y herramientas.</li>
-    </ol>
-    <p>Tips adicionales:</p>
-    <ul>
-      <li>Siempre lleva antorchas para iluminar cuevas.</li>
-      <li>Usa mapas para no perderte.</li>
-      <li>Experimenta con redstone para crear mecanismos.</li>
-    </ul>
-  </div>
-
-  <!-- Banner RevenueCPM (iframe) -->
+  <!-- Banner de anuncio -->
   <div style="text-align:center; margin:25px 0;">
     <script type="text/javascript">
       atOptions = {
@@ -173,7 +137,63 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/ee4049fde045d337a6a615f17915ee32/invoke.js"></script>
   </div>
 
-  <!-- Descargas -->
   <div class="app-version" id="downloads">
     <img src="https://i.postimg.cc/zVNWKtp3/IMG-7433.jpg" alt="Minecraft APK" class="app-image">
-    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn" onclick="load
+    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn" onclick="loadAd()">Minecraft 1.21.101 con música</a>
+    <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn" onclick="loadAd()">Minecraft 1.21.101 sin música</a>
+  </div>
+
+  <h2 style="text-align:center;" id="features">Características y novedades</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>Multijugador Online</h3>
+      <p>Juega con amigos en servidores estables y rápidos.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Nuevos Bloques</h3>
+      <p>Explora y construye con bloques inéditos que amplían tu creatividad.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Mecánica de Combate</h3>
+      <p>Mejoras en armas y nuevas estrategias para PvP y mobs.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Música Mejorada</h3>
+      <p>Disfruta de sonidos y música más envolventes.</p>
+    </div>
+  </div>
+
+  <h2 style="text-align:center; margin-bottom:20px;" id="screenshots">Screenshots del juego</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="https://i.postimg.cc/Z0rkwHt1/IMG-7436.png" alt="Screenshot 1">
+      <img src="https://i.postimg.cc/GTPZ9Lxc/IMG-7437.jpg" alt="Screenshot 2">
+      <img src="https://i.postimg.cc/zHYsJbWt/IMG-7438.jpg" alt="Screenshot 3">
+      <img src="https://i.postimg.cc/N9Xhq7y2/IMG-7439.png" alt="Screenshot 4">
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 TrexiGaming. Todos los derechos reservados.
+</footer>
+
+<script>
+  // Fecha automática
+  const dateSpan = document.getElementById('news-date-text');
+  const options = { year:'numeric', month:'long', day:'numeric' };
+  const today = new Date();
+  dateSpan.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
+
+  // Popunder de RevenueCPM
+  function loadAd(){
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = '//pl27735290.revenuecpmgate.com/e8/16/c9/e816c913e85e45e0b88d0798be06ad12.js';
+    document.body.appendChild(s);
+  }
+</script>
+
+</body>
+</html>
