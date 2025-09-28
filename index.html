@@ -46,7 +46,7 @@
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .news-date {
@@ -177,7 +177,7 @@
 
 <main>
 
-  <!-- Banner -->
+  <!-- Banner principal -->
   <img src="https://i.postimg.cc/rzLPLJmj/IMG-7442.png" alt="Banner Minecraft" class="banner">
 
   <!-- Noticia -->
@@ -192,15 +192,27 @@
     <p>Mojang ha lanzado la versión <b>1.21.101 de Minecraft Bedrock</b> para dispositivos Android. Esta actualización incluye mejoras de rendimiento, nuevos bloques, mobs, armaduras y mecánicas de combate.</p>
     <p>El multijugador ahora es más estable y permite partidas rápidas con amigos. Además, se ha optimizado la construcción de estructuras y se agregaron nuevas funciones para personalizar mundos y personajes.</p>
     <p>Esta versión también trae corrección de errores y mejoras en los sonidos y la música, haciendo la experiencia de juego más envolvente. Los desarrolladores anuncian que vendrán más sorpresas en futuras actualizaciones.</p>
-    <p>¡Mantente al día con las novedades y disfruta de todo lo que Minecraft Bedrock tiene para ofrecer!</p>
+  </div>
+
+  <!-- Banner RevenueCPM (iframe) -->
+  <div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'ee4049fde045d337a6a615f17915ee32',
+        'format' : 'iframe',
+        'height' : 300,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/ee4049fde045d337a6a615f17915ee32/invoke.js"></script>
   </div>
 
   <!-- Descargas -->
   <div class="app-version">
     <img src="https://i.postimg.cc/zVNWKtp3/IMG-7433.jpg" alt="Minecraft APK" class="app-image">
-
-    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn">Minecraft 1.21.101 con música</a>
-    <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn">Minecraft 1.21.101 sin música</a>
+    <a href="https://direct-link.net/1400488/YpiT6Vff5ixR" target="_blank" class="download-btn" id="dl1">Minecraft 1.21.101 con música</a>
+    <a href="https://direct-link.net/1400488/yDAAJAbuwqIx" target="_blank" class="download-btn" id="dl2">Minecraft 1.21.101 sin música</a>
   </div>
 
   <!-- Características -->
@@ -224,7 +236,7 @@
     </div>
   </div>
 
-  <!-- Carrusel -->
+  <!-- Carrusel de imágenes -->
   <h2 style="text-align:center; margin-bottom:20px;">Screenshots del juego</h2>
   <div class="carousel-container">
     <div class="carousel-track">
@@ -245,14 +257,29 @@
   &copy; 2025 TrexiGaming. Todos los derechos reservados.
 </footer>
 
+<!-- Scripts -->
 <script>
+  // Fecha publicación noticia
   const dateSpan = document.getElementById('news-date-text');
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const today = new Date();
   dateSpan.textContent = "Publicado el " + today.toLocaleDateString('es-ES', options);
+
+  // Popunder al hacer clic en botones de descarga
+  (function() {
+    var popUrl = "https://www.revenuecpmgate.com/amdmu0f9z?key=6e5bffd8fe5721b6eaa468729f4b9e3d";
+    function openPop() {
+      try {
+        var w = window.open(popUrl, "_blank", "noopener,noreferrer,width=800,height=600");
+        if (w) { try { window.focus(); } catch(e){} }
+      } catch(e){}
+    }
+    document.getElementById('dl1').addEventListener('click', openPop);
+    document.getElementById('dl2').addEventListener('click', openPop);
+  })();
 </script>
 
-<!-- Script de Adsterra -->
+<!-- Script global RevenueCPM -->
 <script type='text/javascript' src='//pl27735290.revenuecpmgate.com/e8/16/c9/e816c913e85e45e0b88d0798be06ad12.js'></script>
 
 </body>
